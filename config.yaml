@@ -24,44 +24,51 @@ DefaultContentLanguage: zh-cn
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: true
 
-permalinks:
+permalinks: #站点全局设置
     post: /p/:slug/
     page: /:slug/
 
 params:
-    mainSections:
+    mainSections: #在首页和归档页面输出来自指定 section 的文章。默认会输出放在 content/post 文件夹下的页面。
         - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon:
+    featuredImageField: image #特色图片使用字段，默认image
+    rssFullContent: true #RSS输出文章完整内容
+    favicon: img/1.jpg #站点图标
 
     footer:
         since: 2020
         customText:
 
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+    dateFormat: #日期格式设置Go 的时间格式相比其他语言有很大的不同，请参考官方文档：dateFormat
+        published: Jan 02, 2006 #文章更新日期
+        lastUpdated: Jan 02, 2006 15:04 MST #文章发布日期
 
-    sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        avatar:
-            enabled: true
-            local: true
-            src: img/avatar.png
+    sidebar: #与左侧边栏相关的设置
+        emoji: 🍥 #头像底部的 Emoji。留空不显示。
+        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. #站点介绍
+        avatar: #博主头像
+            enabled: true #是否显示
+            local: true #是否在本地
+            src: img/1.jpg #地址
 
-    article:
-        math: false
-        toc: true
-        readingTime: true
-        license:
-            enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+    article: #文章页面相关设置
+        math: false #在所有文章启用KaTeX
+        toc: true #在所有文章启用目录
+        readingTime: true #在所有文章启用阅读时间
+        license: #文章协议设置，显示在页面底部
+            enabled: true #是否在所有文章底部显示协议信息。可以在文章的 Front Matter 插入 license: false 来单独关闭
+            default: Licensed under CC BY-NC-SA 4.0 #默认文章协议。可以在文章的 Front Matter 插入 license: "My custom licence" 来单独关闭
 
-    comments:
-        enabled: true
-        provider: disqus
+    comments: #留言系统设置
+        enabled: true #是否在文章底部默认显示评论系统
+        provider: disqus #评论系统提供商。
+                         #disqus：需要在 config.toml 添加 disqusShortname 字段。参考官方文档： Configure Disqus
+                         #utterances
+                         #remark42
+                         #vssue
+                         #waline
+                         #twikoo
+                         #可以在 layouts/partials/comments/provider/ 下新建 {provider}.html 来添加更多评论系统的支持。
 
         disqusjs:
             shortname:
@@ -152,19 +159,19 @@ params:
         page:
             - type: toc
 
-    opengraph:
+    opengraph: #Open Graph 标签相关设置
         twitter:
             # Your Twitter username
-            site:
+            site: mubai632 #博主Twitter用户名（不加@）
 
             # Available values: summary, summary_large_image
             card: summary_large_image
 
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
+    defaultImage: #默认特色图片设置
+        opengraph: #标签默认图片
+            enabled: false #是否启用
+            local: false #是否为本地图片。如果设置成 true ，主题会在站点根目录的 assets 文件夹下寻找
+            src: #图片地址  推荐把图片放在本地，因为这样能被主题自动裁剪成合适的尺寸。
 
     colorScheme:
         # Display toggle
@@ -188,13 +195,13 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/mubai632/ #https://github.com/CaiJimmy/hugo-theme-stack
           params:
               icon: brand-github
 
         - identifier: twitter
           name: Twitter
-          url: https://twitter.com
+          url: https://twitter.com/mubai632 #https://twitter.com
           params:
               icon: brand-twitter
 
