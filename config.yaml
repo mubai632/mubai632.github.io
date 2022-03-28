@@ -209,7 +209,7 @@ menu:
           name: CSDN
           url: https://www.csdn.net/
           params:
-              icon: CSDN_Logo
+              icon: brand-CSDN
 
 links:
   - title: GitHub
