@@ -24,16 +24,16 @@ DefaultContentLanguage: zh-cn
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: true
 
-permalinks: #站点全局设置
+permalinks: 
     post: /p/:slug/
     page: /:slug/
 
-params:
+params: #站点全局设置
     mainSections: #在首页和归档页面输出来自指定 section 的文章。默认会输出放在 content/post 文件夹下的页面。
         - post
     featuredImageField: image #特色图片使用字段，默认image
     rssFullContent: true #RSS输出文章完整内容
-    favicon: img/1.jpg #站点图标
+    favicon: img/2.jpg #站点图标s
 
     footer:
         since: 2020
@@ -45,7 +45,7 @@ params:
 
     sidebar: #与左侧边栏相关的设置
         emoji: 🍥 #头像底部的 Emoji。留空不显示。
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. #站点介绍
+        subtitle:  Welcome to Mubai's Blog.This blogger does Nothing!!!!!!  #Lorem ipsum dolor sit amet, consectetur adipiscing elit. #站点介绍
         avatar: #博主头像
             enabled: true #是否显示
             local: true #是否在本地
@@ -53,7 +53,7 @@ params:
 
     article: #文章页面相关设置
         math: false #在所有文章启用KaTeX
-        toc: true #在所有文章启用目录
+        toc: false #在所有文章启用目录
         readingTime: true #在所有文章启用阅读时间
         license: #文章协议设置，显示在页面底部
             enabled: true #是否在所有文章底部显示协议信息。可以在文章的 Front Matter 插入 license: false 来单独关闭
@@ -168,10 +168,10 @@ params:
             card: summary_large_image
 
     defaultImage: #默认特色图片设置
-        opengraph: #标签默认图片
+        opengraph:  #标签默认图片
             enabled: false #是否启用
             local: false #是否为本地图片。如果设置成 true ，主题会在站点根目录的 assets 文件夹下寻找
-            src: #图片地址  推荐把图片放在本地，因为这样能被主题自动裁剪成合适的尺寸。
+            src: luca-bravo-alS7ewQ41M8-unsplash.jpg #图片地址  推荐把图片放在本地，因为这样能被主题自动裁剪成合适的尺寸。
 
     colorScheme:
         # Display toggle
@@ -204,6 +204,26 @@ menu:
           url: https://twitter.com/mubai632 #https://twitter.com
           params:
               icon: brand-twitter
+
+        - identifier: CSDN
+          name: CSDN
+          url: https://www.csdn.net/
+          params:
+              icon: CSDN_Logo
+
+links:
+  - title: GitHub
+    description: GitHub is the world's largest software development platform.
+    website: https://github.com
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: TypeScript
+    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+    website: https://www.typescriptlang.org
+    image: ts-logo-128.jpg
+  - title: CSDN
+    description: CSDN
+    website: https://www.csdn.net/
+    image: https://img-home.csdnimg.cn/images/20201124032511.png
 
 related:
     includeNewer: true
