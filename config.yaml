@@ -207,7 +207,7 @@ menu:
 
         - identifier: CSDN
           name: CSDN
-          url: https://www.csdn.net/
+          url: https://blog.csdn.net/mubai1316261536?spm=1000.2115.3001.5343
           params:
               icon: brand-CSDN
 
@@ -222,7 +222,7 @@ links:
     image: ts-logo-128.jpg
   - title: CSDN
     description: CSDN
-    website: https://www.csdn.net/
+    website: https://blog.csdn.net/mubai1316261536?spm=1000.2115.3001.5343
     image: https://img-home.csdnimg.cn/images/20201124032511.png
 
 related:
